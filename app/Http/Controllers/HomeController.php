@@ -33,12 +33,12 @@ class HomeController extends Controller
             'dropdown6' => ['ﻣﻜﺘﺐ اﻟﻤﺠﻠﺲ', 'ﻛﻠﻤﺔ اﻟﺮﺋﻴﺲ', 'اﻟﻤﺸﺎﺭﻳﻊ', 'ﺃﻧﺸﻄﺔ اﻟﻤﺠﻠﺲ']
         ];
         
-        $navs = ['dropdown1' => 'مديونة ', 'dropdown2' => 'ﻓﻀﺎء اﻟﻤﻮاﻃﻨﻴﻦ', 'dropdown3' => 'اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ', 'dropdown4'=>'اﻟﻤﺠﻠﺲ' , 'dropdown5' => 'اﻟﺠﻤﻌﻴﺎﺕ ', 'dropdown6' => 'ﺇﻗﺘﺼﺎﺩ ' ];
+        $navs = ['dropdown1' => 'ﻣﺪﻳﻮﻧﺔ ', 'dropdown2' => 'ﻓﻀﺎء اﻟﻤﻮاﻃﻨﻴﻦ', 'dropdown3' => 'اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ', 'dropdown4'=>'اﻟﻤﺠﻠﺲ' , 'dropdown5' => 'اﻟﺠﻤﻌﻴﺎﺕ ', 'dropdown6' => 'ﺇﻗﺘﺼﺎﺩ ' ];
 
         return view('index', [
             'navs' => $navs,
             'dropdowns' => $dropdowns,
-            'active' => 'الرئيسية '
+            'active' => 'اﻟﺮﺋﻴﺴﻴﺔ '
         ]);
     }
 }
