@@ -7,11 +7,11 @@
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
 
-.carousel-item { 
+.carousel-x .carousel-item { 
    position: relative; 
    width: 100%; /* for IE 6 */
 }
-.carousel-item::after{ 	 
+.carousel-x .carousel-item::after{ 	 
 	 content:'' ;
 	 position: absolute;
 	 z-index:2;
@@ -26,7 +26,7 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
 	    );
 }
 
-.carousel-item > h2 { 
+.carousel-x .carousel-item > h2 { 
    position: absolute; 
    z-index:3;
    top: 180px; 
@@ -36,7 +36,7 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
    color:white;
 }
 
-.carousel-item > p { 
+.carousel-x .carousel-item > p { 
 	position: absolute; 
 	z-index:3;
 	top: 240px; 
@@ -60,11 +60,21 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.agenda-desc {
+	width: 99%;
+    direction: rtl;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .divider {
 	margin-top: -15px;
 	margin-bottom: 5%;
 }
 
+.blue-txt{
+	color: #3997bb;
+}
 /*
 ul{padding:0; margin:0; list-style:none}
 a{text-decoration:none; color:#2f2f2f}
