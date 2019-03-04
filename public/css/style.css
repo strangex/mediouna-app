@@ -30,7 +30,7 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
    position: absolute; 
    z-index:3;
    top: 180px; 
-   left: 59%; 
+   left: 53%; 
    font-weight: 700;
    width: 100%; 
    color:white;
@@ -46,7 +46,24 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
 	font-size: 17px ! important;
 	color:white;
 }
+#ticker2  p { 
+	direction: rtl;
+	font-size:18px;
+	height: 170px;
+	text-align: justify;
+	margin-right: 3%;
+}
 
+.truncate {
+	direction: rtl; 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.divider {
+	margin-top: -15px;
+	margin-bottom: 5%;
+}
 
 /*
 ul{padding:0; margin:0; list-style:none}

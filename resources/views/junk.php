@@ -1,4 +1,60 @@
-   <div style='margin-top: 2%; margin-left: inherit;' class='row z-depth-1'>
+                <div style='margin-top: 2%; margin-left: inherit;' class='row'>
+                        <div class="innerWrap">
+                            <div class="list">
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
+                                </a>
+                                <span> List 1</span> 
+                            </div>
+                            <div class="list">
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
+                                </a>
+                                <span> List 1</span> 
+                            </div>
+                            <div class="list">
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
+                                </a>
+                                <span> List 1</span> 
+                            </div>
+                            <div class="list">
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
+                                </a>
+                                <span> List 1</span> 
+                            </div>
+                        </div>
+                        <!--ul id="webTicker" style='position: relative;'>
+                            <li class='ticker-elt'>
+                                <a  href="#">
+                                    <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
+                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
+                                </a>
+                            </li>
+                            <li class='ticker-elt'>
+                                <a class='white-text' href="#">
+                                    <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
+                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
+                                </a>
+                            </li>
+                            <li class='ticker-elt'>
+                                <a class='white-text' href="#">
+                                   <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
+                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
+                                </a>
+                            </li>
+                        </ul-->
+                </div>
+                   <div style='margin-top: 2%; margin-left: inherit;' class='row z-depth-1'>
                     <div class='col s2' style= "padding:0; ">
                         <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
                             font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>

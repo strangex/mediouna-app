@@ -8,11 +8,11 @@
         {{ Html::style('css/style.css') }}
         {{ Html::style('css/materialize.min.css') }}
         {{ Html::style('css/jquery.mCustomScrollbar.css') }}
-        <!--scripts-->
+        <!--scri {{ Html::script('js/jquery.webticker.min.js') }}  pts-->
         {{ Html::script('js/app.js')}}
         {{ Html::script('js/materialize.min.js') }}   
-        {{ Html::script('js/jquery.webticker.min.js') }}  
         {{ Html::script('js/jquery.dotdotdot.min.js') }}
+        {{ Html::script('js/jquery.easy-ticker.min.js') }}
     </head>
     <body>
         <div id='core-container'>
@@ -57,6 +57,7 @@
                         </ul>
                     </div>
                 </nav>
+
                 <div id="modal1" class="modal" style='max-height: 90%; width: 80%; height:100%;'>
                     <div style='margin:0; height:100%' class="card horizontal">
                       <div class="card-image">
@@ -76,70 +77,109 @@
                     </div>
                 </div>
           
-                 <div style='margin-top: 2%; margin-left: inherit;' class='row z-depth-1'>
-                    <div class='col s2' style= "padding:0; ">
-                        <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
-                            font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px;'>
-                            <i class="fas fa-newspaper"></i>
-                            <span>أحداث</span>
-                        </a>
-                    </div>
-                    <div class='col s10' style= "padding-top: 10px;">
-                        <ul id="webTicker" style='position: relative;'>
-                            <li class='ticker-elt'>
-                                <a  href="#">
-                                    <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
-                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
+                <div style='margin-top: 2%; margin-left: inherit;' class='row' id='ticker1'>
+                    <div class="innerWrap" style='width: 100%;'>
+                        <div class="row">
+                            <div class='col s2'>
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
                                 </a>
-                            </li>
-                            <li class='ticker-elt'>
-                                <a class='white-text' href="#">
-                                    <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
-                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
+                            </div>
+                            <div class='col s10' style=' padding-top: 4px; display: flex; flex-direction: row-reverse;'>
+                                <span  class='red-text' style='font-size:18px; font-weight: 600;'>12-12-2019</span>
+                                <span  class='black-text' style='direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;'>من اجل السلامة الطرقية:</span>
+                                <span  class='black-text truncate' style='font-size:18px; padding-right: 1%; width: 60%'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col s2'>
+                                <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
+                                font-size: 18px; background-color:#ea534f; font-weight: 500; padding-top: 4px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>أحداث</span>
                                 </a>
-                            </li>
-                            <li class='ticker-elt'>
-                                <a class='white-text' href="#">
-                                   <span class='red-text' style='font-size:18px; padding-left: 10px'>12-12-2019</span>
-                                    <span class='black-text' style='font-size:18px; padding-left: 10px'>اﻟﻤﺸﺎﺭﻳﻊ اﻟﺘﻨﻤﻮﻳﺔ</span>
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+                            <div class='col s10' style=' padding-top: 4px; display: flex; flex-direction: row-reverse;'>
+                                <span  class='red-text' style='font-size:18px; font-weight: 600;'>12-12-2019</span>
+                                <span  class='black-text' style='direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;'>من اجل السلامة الطرقية:</span>
+                                <span  class='black-text truncate' style='font-size:18px; padding-right: 1%; width: 60%'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class='row'>
-                    <div class="col s6 carousel carousel-slider" style='height: 350px'>
-                        <div class="carousel-fixed-item right" style='top:0px; padding-left: 70%;'>
-                          <a class="btn waves-effect" style="background-color:#ea534f; font-weight: 700; font-size:15px">ﺃﻧﺸﻄﺔ اﻟﻤﺠﻠﺲ</a>
+                    <div class="col s6" style='height: 350px'>
+                        <div class='row carousel carousel-slider'>
+                            <div class="carousel-fixed-item right" style='top:0px; padding-left: 70%;'>
+                              <a class="btn waves-effect" style="background-color:#ea534f; font-weight: 700; font-size:15px">ﺃﻧﺸﻄﺔ اﻟﻤﺠﻠﺲ</a>
+                            </div>
+                            <a class="carousel-item" href="#one!">
+                                <h2>من اجل السلامة الطرقية</h2>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img src="images/slider4.jpg"/>
+                            </a>
+                            <a class="carousel-item" href="#one!">
+                                <h2>من اجل السلامة الطرقية</h2>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img src="images/slider4.jpg"/>
+                            </a>
+                            <a class="carousel-item" href="#two!">
+                                <h2>من اجل السلامة الطرقية</h2>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img src="images/slider3.png"/>
+                            </a>
+                            <a class="carousel-item" href="#three!">
+                                <h2>من اجل السلامة الطرقية</h2>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img src="images/slider3.png"/>
+                            </a>
+                            <a class="carousel-item" href="#four!">
+                                <h2>من اجل السلامة الطرقية</h2>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img src="images/slider3.png"/>
+                            </a>
                         </div>
-                        <a class="carousel-item" href="#one!">
-                            <h2>من اجل السلامة الطرقية</h2>
-                            <p class='block-with-text'>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                            <img src="images/slider4.jpg"/>
-                        </a>
-                        <a class="carousel-item" href="#one!">
-                            <h2>من اجل السلامة الطرقية</h2>
-                            <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                            <img src="images/slider4.jpg"/>
-                        </a>
-                        <a class="carousel-item" href="#two!">
-                            <h2>من اجل السلامة الطرقية</h2>
-                            <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                            <img src="images/slider3.png"/>
-                        </a>
-                        <a class="carousel-item" href="#three!">
-                            <h2>من اجل السلامة الطرقية</h2>
-                            <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                            <img src="images/slider3.png"/>
-                        </a>
-                        <a class="carousel-item" href="#four!">
-                            <h2>من اجل السلامة الطرقية</h2>
-                            <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                            <img src="images/slider3.png"/>
-                        </a>
+                        <div class='col' style="width: 100%">
+                            <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'><i class="far fa-calendar"></i><span class='red-text'>9h05 12-12-2019</span></h5>
+                            <p>من اجل السلامة الطرقية:</p>
+                            <div class="divider"></div>
+                        </div>
                     </div>
-                    <div class="col s6">
-                      
+                    <div class="col s6 row" >
+                        <div class='center' style="position: absolute; padding-left: 1%;">
+                            <a class="btn waves-effect" style="background-color:#50aed2; width:230px; font-weight: 700; font-size:15px">طلبات العروض</a>
+                        </div>
+                        <div id='ticker2' class="z-depth-1">
+                            <div class="innerWrap" style='width: 100%; padding-left: 4%; padding-top: 7%; padding-right: 2%;'>
+                                <div>
+                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='red-text'>(12-12-2019)</span></h5>
+                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                     <div class="divider"></div>
+                                </div>
+                                <div>
+                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='red-text'>(12-12-2019)</span></h5>
+                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                     <div class="divider"></div>
+                                </div>
+                                <div>
+                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='red-text'>(12-12-2019)</span></h5>
+                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                     <div class="divider"></div>
+                                </div>
+                                <div>
+                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='red-text'>(12-12-2019)</span></h5>
+                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                     <div class="divider"></div>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
                 </div>
                 
