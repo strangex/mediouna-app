@@ -1,24 +1,29 @@
 $(function () {
+	setTimeout(function() {
+		$("#progress-bar").hide() ;
+		$("#core-container").fadeIn(300) ;
+		$('.rvs-container').rvslider();
+	}, 3000);
 
 	$(".dropdown-trigger").dropdown();
 	$('.tooltipped').tooltip();
-	$('.carousel-item > p').dotdotdot({});
-	$('#ticker2  p').dotdotdot({});
+	 $('.materialboxed').materialbox({
+	 	onOpenEnd:function(){
+	 		$("#materialbox-overlay ").css({"top":"-100px",  "height": "10000px", "left": "-400px"}) ;
+	 		$("#core-container").mCustomScrollbar("disable");
+	 		$(".lSAction, #top-link").hide() ;
+	 	},
+	 	onCloseEnd:function(){
+	 		$("#core-container").mCustomScrollbar("update");
+	 		$(".lSAction, #top-link").show() ;
+	 	}
+	 });
+	
+	$('.carousel-item > p').dotdotdot();
+	$('#offers-ticker  p').dotdotdot();
+
 	$('.modal').modal({
 		'endingTop' : '5%'
-	});
-
-	$('.ticker-elt').css("padding-right","60px") ;
-
-	$("#core-container").mCustomScrollbar({
-		scrollInertia:4,
-		theme:"dark"
-	});
-
-	$("#agenda-container").mCustomScrollbar({
-		scrollInertia:4,
-		mouseWheelPixels: 5,
-		theme:"dark"
 	});
 
 	$('.carousel-x').carousel({
@@ -31,42 +36,90 @@ $(function () {
 
 	setInterval(function(){
 		$('.carousel').carousel('next');
-	}, 10000);
+	}, 100000);
 
+	$('.ticker-elt').css("padding-right","60px") ;
 
-
-
-	$('#ticker1').easyTicker({
-		direction: 'up',
-		easing: 'swing',
-		speed: 'slow',
-		interval: 5000,
-		height: '38px',
-		visible: 0,
-		mousePause: 1,
-		controls: {
-			up: '',
-			down: '',
-			toggle: '',
-			playText: 'Play',
-			stopText: 'Stop'
+	$("#core-container").mCustomScrollbar({
+		scrollInertia:4,
+		theme:"dark",
+		callbacks:{
+			onScroll: function(){
+				if(this.mcs.topPct >= 20)
+				{
+					$("#top-link").fadeIn(200);
+				}
+				else
+				{
+					$("#top-link").fadeOut(200);
+				}
+			}
 		}
 	});
-	$('#ticker2').easyTicker({
-		direction: 'up',
-		easing: 'swing',
-		speed: 'slow',
-		interval: 10000,
-		height: '730px',
-		visible: 0,
-		mousePause: 1,
-		controls: {
-			up: '',
-			down: '',
-			toggle: '',
-			playText: 'Play',
-			stopText: 'Stop'
-		}
+
+	$("#top-link").on("click",function(){
+		$("#core-container").mCustomScrollbar("scrollTo","top",{
+		    scrollInertia:2000
+		});
+	}) ;
+
+	$("#agenda-container").mCustomScrollbar({
+		scrollInertia:4,
+		mouseWheelPixels: 5,
+		theme:"dark"
 	});
-	$('.rvs-container').rvslider();
+
+	function getTickerConfig(height){
+		return {
+			direction: 'up',
+			easing: 'swing',
+			speed: 'slow',
+			interval: 50000,
+			height: height,
+			visible: 0,
+			mousePause: 1,
+			controls: {
+				up: '',
+				down: '',
+				toggle: '',
+				playText: 'Play',
+				stopText: 'Stop'
+			}
+		} ;
+	}
+
+	$('#global-ticker').easyTicker(getTickerConfig("38px"));
+	$('#association-ticker').easyTicker(getTickerConfig("440px"));
+	$('#offers-ticker').easyTicker(getTickerConfig("790px")); 
+
+	
+
+	var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+
+	var data = [{
+            date: year + '-' + month + '-' + (date - 1),
+            value: 'انطلاق عملية التسجيل في المخيم'
+        }, {
+            date: new Date(year, month - 1, date + 1),
+            value: 'انطلاق عملية التسجيل في المخيم'
+    }];
+
+	$('#agenda').calendar({
+			data: data,
+			monthArray: ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+			 'August', 'September', 'October', 'November', 'December'],
+			weekArray: [],
+            date: new Date()
+    });
+
+     $("#mediouna-slider").lightSlider({
+        item: 2,
+        loop: true,
+        vertical:true,
+        verticalHeight:340,
+    });
+ 
 });

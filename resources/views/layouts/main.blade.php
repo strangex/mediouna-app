@@ -4,20 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>مديونة  - @yield('title')</title>
+    <link rel="icon"  href="images/med.jpg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {{ Html::style('css/style.css') }}
     {{ Html::style('css/materialize.min.css') }}
     {{ Html::style('css/jquery.mCustomScrollbar.css') }}
     {{ Html::style('css/rvslider.min.css') }}
-    <!--scri {{ Html::script('js/jquery.webticker.min.js') }}  pts-->
+    {{ Html::style('css/calendar.css') }}
+    {{ Html::style('css/lightslider.css') }}
+    <!--scripts-->
     {{ Html::script('js/app.js')}}
     {{ Html::script('js/materialize.min.js') }}   
     {{ Html::script('js/jquery.dotdotdot.min.js') }}
     {{ Html::script('js/jquery.easy-ticker.min.js') }}
     {{ Html::script('js/rvslider.min.js') }}
+    {{ Html::script('js/calendar.js') }}
+    {{ Html::script('js/lightslider.js') }}
 </head>
 <body>
-    <div id='core-container'>
+    <div id='progress-bar'>
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id='core-container' style='display:none'>
+        <a style='background-color:#e82e96' id="top-link" class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="عودة إلى الفوق">
+            <i class="material-icons">arrow_upward</i>
+        </a>
         <div class="container" id='shit' style="width:80%;">
             @section('container')
                 <header id="header">
@@ -81,12 +103,12 @@
                 </div>
 
                 <!--Last news ticker-->
-                <div style='margin-top: 2%; margin-left: inherit;' class='row' id='ticker1'>
+                <div style='margin-top: 2%; margin-left: inherit;' class='row hoverable z-depth-1' id='global-ticker'>
                     <div class="innerWrap" style='width: 100%;'>
-                        <div class="row">
-                            <div class='col s2'>
+                        <div class="row"  style="padding-top: 2px">
+                            <div class='col s2' style='margin-left: -22px;'>
                                 <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
-                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 4px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
+                                font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 5px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
                                     <i class="fas fa-newspaper"></i>
                                     <span>أحداث</span>
                                 </a>
@@ -97,10 +119,10 @@
                                 <span  class='black-text truncate' style="font-size:18px; padding-right: 1%; width: 60%; font-family: 'DroidArabicKufi', serif;">حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class='col s2'>
+                        <div class="row" style="padding-top: 2px">
+                            <div class='col s2' style='margin-left: -22px;'>
                                 <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
-                                font-size: 18px; background-color:#ea534f; font-weight: 500; padding-top: 4px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
+                                font-size: 18px; background-color:#ea534f; font-weight: 500; padding-top: 5px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
                                 <i class="fas fa-newspaper"></i>
                                 <span>أحداث</span>
                             </a>
@@ -115,154 +137,201 @@
                 </div>
 
                 <div class='row'>
-                    <div class="col s6">
+                    <div class='col s7' style='padding-right: 0;'>
                         <!--Carousel-->
-                        <div class='row carousel carousel-x carousel-slider' style='height: 350px'>
+                        <div class='row carousel carousel-x carousel-slider' style='height: 400px'>
                             <div class="carousel-fixed-item right" style='top:0px; padding-left: 70%;'>
                                 <a class="btn waves-effect" style="background-color:#ea534f; font-weight: 700; font-size:15px">ﺃﻧﺸﻄﺔ اﻟﻤﺠﻠﺲ</a>
                             </div>
                             <a class="carousel-item" href="#one!">
                                 <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img src="images/slider4.jpg"/>
+                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار  فظ ال فظ ال:من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار فظ ال  :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                <img style='height:420px' src="images/slider4.jpg"/>
                             </a>
                             <a class="carousel-item" href="#one!">
                                 <h2>من اجل السلامة الطرقية</h2>
                                 <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img src="images/slider4.jpg"/>
+                                <img style='height:420px' src="images/slider4.jpg"/>
                             </a>
                             <a class="carousel-item" href="#two!">
                                 <h2>من اجل السلامة الطرقية</h2>
                                 <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img src="images/slider3.png"/>
+                                <img style='height:420px' src="images/slider3.png"/>
                             </a>
                             <a class="carousel-item" href="#three!">
                                 <h2>من اجل السلامة الطرقية</h2>
                                 <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img src="images/slider3.png"/>
+                                <img style='height:420px' src="images/slider3.png"/>
                             </a>
                             <a class="carousel-item" href="#four!">
                                 <h2>من اجل السلامة الطرقية</h2>
                                 <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img src="images/slider3.png"/>
+                                <img style='height:420px' src="images/slider3.png"/>
                             </a>
                         </div>
-
-                        <!--Agenda-->
-                        <div class='row z-depth-1' style="width: 100%; padding: 3%">
-                            <div class='row' style='display: flex; flex-direction: row-reverse;'>
-                                <div class='col s6' style="direction: rtl">
-                                    <h5 style='font-weight: 600;'>أجندة مديونة</h5>
-                                </div>
-                                <div class='col s6'>
-                                    <a class="btn-floating btn-large waves-effect waves-light blue pulse tooltipped" data-position="top" data-tooltip="تصفح الأجندة">
-                                        <i class="far fa-calendar fa-large"></i>
-                                    </a>
-                                </div>   
+                        <!--Offers-->
+                        <div class="row hoverable" style='width: 100%; margin-right: 0;' >
+                            <div class='center' style="position: absolute; padding-left: 1%;">
+                                <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">طلبات العروض</a>
                             </div>
-                            <div class="collection" id='agenda-container' style='height: 300px'>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
+                            <div id='offers-ticker' class="z-depth-1">
+                                <div class="innerWrap" style='width: 100%; padding-left: 4%; padding-top: 7%; padding-right: 2%;'>
+                                    <div>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                        
                                     </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                    <div class="divider"></div>
+                                    <div style='padding-top: 2%;'>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
                                     </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
+                                    <div class="divider"></div>
+                                    <div style='padding-top: 2%;'>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
                                     </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                    <div class="divider"></div>
+                                    <div style='padding-top: 2%;'>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
                                     </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
-                                    </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
-                                    </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
-                                    </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
-                                    </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
-                                    </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
-                                    </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
-                                    </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
-                                    </div>
-                                </li>
-                                <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
-                                    <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
-                                        <i class="far fa-calendar fa-3x blue-text"></i>
-                                    </div>
-                                    <div class='col s10'>
-                                        <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                        <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
-                                    </div>
-                                </li>
+                                </div> 
                             </div>
-                                <!--h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'><i class="far fa-calendar"></i><span class='red-text'>9h05 12-12-2019</span></h5>
-                                <p>من اجل السلامة الطرقية:</p>
-                                <div class="divider"></div-->
                         </div>
                     </div>
-
-                    <div class="col s6 row" >
-                        <div class='center' style="position: absolute; padding-left: 1%;">
-                            <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">طلبات العروض</a>
+                    <div class='col s5' style='padding-right: 0; padding-left: 1%;'>
+                         <!--Associations-->
+                        <div class='row hoverable' style="margin-right: 0%;">
+                            <div class='center' style="position: absolute; padding-left: 1%;">
+                                <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">أنشطة الجمعيات</a>
+                            </div>
+                            <div id='association-ticker' class="z-depth-1 ticker">
+                                <div class="innerWrap" style='width: 100%; padding-top: 10%; height: 100%'>
+                                    <div class='row' style='display: flex; flex-direction: row-reverse; padding-top: 1%; height: 24%;'>
+                                        <div class='col s4' style='padding-right: 0; padding-left: 0;'>
+                                            <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
+                                        </div>
+                                        <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
+                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class='row' style='display: flex; flex-direction: row-reverse; padding-top: 3%; height: 26%;'>
+                                        <div class='col s4' style='padding-right: 0; padding-left: 0;'>
+                                            <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
+                                        </div>
+                                        <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
+                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class='row' style='display: flex; flex-direction: row-reverse; padding-top: 3%; height: 26%;'>
+                                        <div class='col s4' style='padding-right: 0; padding-left: 0;'>
+                                            <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
+                                        </div>
+                                        <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
+                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class='row' style='display: flex; flex-direction: row-reverse; padding-top: 3%; height: 26%;'>
+                                        <div class='col s4' style='padding-right: 0; padding-left: 0;'>
+                                            <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
+                                        </div>
+                                        <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
+                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id='ticker2' class="z-depth-1">
-                            <div class="innerWrap" style='width: 100%; padding-left: 4%; padding-top: 7%; padding-right: 2%;'>
-                                <div>
-                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                    <div class="divider"></div>
+                        <!--Agenda-->
+                        <div class='row' style="width: 100%; padding-left: 2%">
+                            <div class='z-depth-1 hoverable' style='padding: 5%;'>
+                                <div class='row' style='display: flex; flex-direction: row-reverse;'>
+                                    <div class='col s6' style="direction: rtl">
+                                        <h5 style='font-weight: 600;'>أجندة مديونة</h5>
+                                    </div>
+                                    <div class='col s6'>
+                                        <a class="btn-floating btn-large waves-effect waves-light blue pulse tooltipped" data-position="top" data-tooltip="تصفح الأجندة">
+                                            <i class="far fa-calendar fa-large"></i>
+                                        </a>
+                                    </div>   
                                 </div>
-                                <div>
-                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                    <div class="divider"></div>
-                                </div>
-                                <div>
-                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                    <div class="divider"></div>
-                                </div>
-                                <div>
-                                    <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                    <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                    <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                    <div class="divider"></div>
-                                </div>
-                            </div> 
+                                <div class="collection" id='agenda-container' style='height: 300px'>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
+                                        <div class='col s2' style="padding-left: 4%; padding-top: 2%;">
+                                            <i class="far fa-calendar fa-3x blue-text"></i>
+                                        </div>
+                                        <div class='col s10'>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
+                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                        </div>
+                                    </li>
+                                </div>  
+                            </div>   
                         </div>
+                         <div id="agenda" class='calendar' style="padding-left: 10%; padding-top: 3%;"></div>
                     </div>
                 </div>
 
@@ -300,48 +369,62 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel carousel-y">
-                            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-                            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-                            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-                            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-                            <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+
+                <div class='row'>
+                    <!-- Mediouna-photos-->
+                    <div class='col' style='padding-top: 3%; width: 30%'>
+                        <ul id="mediouna-slider">
+                            <li>
+                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                            </li>
+                            <li>
+                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                            </li>
+                            <li>
+                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                            </li>
+                        </ul>
+                    </div>
+                     <!-- Services-->
+                    <div class='col' style='padding-top: 1%; width: 70%'>
+                        <div class='row'>
+                            <img class='hoverable' src='images/mol.jpg'/>
+                            <img class='hoverable'  src='images/procedure.jpg'/>
+                        </div>
+                        <div class='row'>
+                            <img class='hoverable' src='images/service.jpg'/>
+                            <img class='hoverable'  src='images/plaintes.jpg'/>
+                        </div>
+                    </div>
                 </div>
-                <!--div class='row'>
-                    <div class='col s10'>
-                        
-                    </div>
-                    <div class='col s2'>
-                        <div class='row'>
-                            <img class='hoverable' src='images/p1.png'/>
-                            <img class='hoverable'  src='images/p2.png'/>
-                        </div>
-                        <div class='row'>
-                            <img class='hoverable' src='images/p1.png'/>
-                            <img class='hoverable'  src='images/p2.png'/>
-                        </div>
-                    </div>
-                </div-->
 
                 <footer class="page-footer black">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col l6 s12">
-                                <h5 class="white-text">Footer Content</h5>
-                                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    <div style='padding-right: 8%;'>
+                        <div class="row" style='display: flex; flex-direction: row-reverse;'>
+                            <div class='col s4' style='direction: rtl;'>
+                                <h5 style=" font-weight: 600">نبذة عنا</h5>
+                                <p style='text-align: justify;'>عرف التجمع الحضري بالدار البيضاء خلال الربع الأخير من القرن العشرين وأوائل القرن الحالي عدة تقسيمات إدارية وجماعية يتوخى منها تقريب الإدارة من المواطنين ، وذلك بغية ضبط حاجيات السكان وتلبيتها عن قرب .</p>
                             </div>
-                            <div class="col l4 offset-l2 s12">
-                                <h5 class="white-text">Links</h5>
-                                <ul>
-                                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                                </ul>
+                            <div class='col s5' style='direction: rtl; padding-right: 3%;'>
+                                <h5 style=" font-weight: 600">اتصال</h5>
+                                <p><i style='padding-left: 2%;' class="material-icons md-light">location_on</i>المركب الإداري، 1 شارع علي يعتة، الدارالبيضاء، المغرب</p>
+                                <p><i style='padding-left: 2%;' class="material-icons md-light">access_time</i>أوقات العمل - 08:30-:16:30</p>
+                                <p style="display: flex"><i style='padding-left: 2%;' class="material-icons md-light">phone</i>
+                                    <span style='direction: ltr!important;'>(+212) 0522 61 10 99</span>
+                                </p>
+                                <p><i style='padding-left: 2%;' class="material-icons md-light">alternate_email</i>contact@mediouna.org</p>
+                            </div>
+                            <div class='col s3' style='direction: rtl; padding-top: 4%; padding-right: 5%;'>
+                                <h5>تحتاجون  لى <br/>مساعدة ؟</h5>
+                                <div style='padding-right: 9%'>
+                                    <a style='background-color:#396bf9' class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="أكتبوا لنا">
+                                                <i class="material-icons">email</i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer-copyright" style='border-top:1px solid white; background-color:#131111;'>
+                    <div class="footer-copyright" style='border-top:1px solid #396bf9; background-color:#131111; margin-top: -15px;'>
                         <div class="container center white-text" style='direction: rtl; font-weight: 700;'>
                             © 2019 جميع الحقوق محفوظة لموقع مقاطعة الحي المحمدي
                         </div>
