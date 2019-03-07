@@ -3,6 +3,8 @@ $(function () {
 		$("#progress-bar").hide() ;
 		$("#core-container").fadeIn(300) ;
 		$('.rvs-container').rvslider();
+		$('.carousel-item > p').dotdotdot();
+		$('#offers-ticker  p').dotdotdot();
 	}, 3000);
 
 	$(".dropdown-trigger").dropdown();
@@ -19,8 +21,7 @@ $(function () {
 	 	}
 	 });
 	
-	$('.carousel-item > p').dotdotdot();
-	$('#offers-ticker  p').dotdotdot();
+	
 
 	$('.modal').modal({
 		'endingTop' : '5%'
@@ -36,7 +37,7 @@ $(function () {
 
 	setInterval(function(){
 		$('.carousel').carousel('next');
-	}, 100000);
+	}, 10000);
 
 	$('.ticker-elt').css("padding-right","60px") ;
 
@@ -74,7 +75,7 @@ $(function () {
 			direction: 'up',
 			easing: 'swing',
 			speed: 'slow',
-			interval: 50000,
+			interval: 5000,
 			height: height,
 			visible: 0,
 			mousePause: 1,
@@ -109,8 +110,8 @@ $(function () {
 
 	$('#agenda').calendar({
 			data: data,
-			monthArray: ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-			 'August', 'September', 'October', 'November', 'December'],
+			monthArray: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونيو', 'يوليوز',
+			 'اغسطس', 'شتنبر', 'أكتوبر', 'نونبر', 'دجنبر'],
 			weekArray: [],
             date: new Date()
     });

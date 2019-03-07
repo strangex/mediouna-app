@@ -47,6 +47,20 @@
                         <div class="col s6 m6 l6"><img src="images/med.jpg" alt=""></div>
                         <div class="col s6 m6 l6" style='padding-top: 10%; padding-left: 13%;'>
                             <img src="images/addbanner_728x90_V1.jpg" alt="">
+                            <div style='padding-top: 9%; padding-left: 44%;'>
+                                <a style='margin-right: 1%' class="btn-floating btn waves-effect waves-light blue">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a style='background-color:#e82e96;  margin-right: 1%' class="btn-floating btn waves-effect waves-light">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a style='background-color:#e82e2e;  margin-right: 1%' class="btn-floating btn waves-effect waves-light">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a style='background-color:#2e56e8;  margin-right: 1%' class="btn-floating btn waves-effect waves-light">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -208,7 +222,7 @@
                          <!--Associations-->
                         <div class='row hoverable' style="margin-right: 0%;">
                             <div class='center' style="position: absolute; padding-left: 1%;">
-                                <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">أنشطة الجمعيات</a>
+                                <a class="btn waves-effect" style="background-color:#2c5ea9; width:230px; font-weight: 700; font-size:15px">أنشطة الجمعيات</a>
                             </div>
                             <div id='association-ticker' class="z-depth-1 ticker">
                                 <div class="innerWrap" style='width: 100%; padding-top: 10%; height: 100%'>
