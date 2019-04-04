@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>مديونة  - @yield('title')</title>
+    <title>ﻣﺪﻳﻮﻧﺔ  - @yield('title')</title>
     <link rel="icon"  href="images/med.jpg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div id='core-container' style='display:none'>
-        <a style='background-color:#e82e96' id="top-link" class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="عودة إلى الفوق">
+        <a style='background-color:#e82e96' id="top-link" class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="ﻋﻮﺩﺓ ﺇﻟﻰ اﻟﻔﻮﻕ">
             <i class="material-icons">arrow_upward</i>
         </a>
         <div class="container" id='shit' style="width:80%;">
@@ -74,15 +74,15 @@
                 @endforeach
                 <nav style='padding-left: 15px;' class='black'>
                     <div class="nav-wrapper">
-                        <img src="images/directeur.png" style='height:96%; float:left; padding-right: 1%;
+                        <img src="images/d.jpeg" style='height:96%; float:left; padding-right: 1%;
                         padding-top: 3px' class="circle responsive-img"/>
-                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="background-color: #ea534f; font-weight: 700;">كلمة الرئيس</a>
+                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="background-color: #ea534f; font-weight: 700;">ﻛﻠﻤﺔ اﻟﺮﺋﻴﺲ</a>
                         <ul id="nav-mobile" class="right hide-on-med-and-down" style="display: flex; flex-direction: row-reverse;">
                             @php ($class_tag = "navbar-elt")
-                            @if ($active === 'الرئيسية ')
+                            @if ($active === 'اﻟﺮﺋﻴﺴﻴﺔ ')
                             @php ($class_tag .= " active-elt")
                             @endif
-                            <li class="{{$class_tag}}"><a href="#">الرئيسية </a></li>
+                            <li class="{{$class_tag}}"><a href="#">اﻟﺮﺋﻴﺴﻴﺔ </a></li>
                             @php ($class_tag = "navbar-elt dropdown-trigger")
                             @foreach ($navs as $id => $name)
                             @if ($active === $name)
@@ -100,16 +100,41 @@
                 <div id="modal1" class="modal" style='max-height: 90%; width: 80%; height:100%;'>
                     <div style='margin:0; height:100%' class="card horizontal">
                         <div class="card-image">
-                            <img style='height: 90%; height:100%' src="images/directeur.jpg">
+                            <img style='height: 90%; height:100%' src="images/directeur.jpeg">
                         </div>
                         <div class="card-stacked">
                             <div class="card-content" style="direction: rtl;">
-                                <h4>رشيد اجكيني</h4>
-                                <h5>رئيس المقاطعة</h5>
+                               <h4>   اﻟﺴﻴﺪ ﺃﺑﻮ اﻟﻐﺎﻟﻲ ﺻﻼﺡ اﻟﺪﻳﻦ ﺭﺋﻴﺲ اﻟﻤﺠﻠﺲ اﻟﺠﻤﺎﻋﻲ ﻟﺠﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ </h4>
                                 <br/>
-                                <p>نضع بين أيديكم هذا الموقع الإلكتروني الخاص بمقاطعة الحي المحمدي, بهدف بناء جسر لتبادل المعلومة بين المقاطعة كمرفق جماعي عمومي و المواطنين , كشريك أساسي في بناء مستقبل المنطقة, و إيمانا منا بأهمية التواصل كآلية من آليات الحكامة الجيدة في منظومة التنمية المستدامة.</p><br/>
-                                <p>أجمعت كل المكونات في مقاطعة الحي المحمدي, منتخبين و موظفين, على أنه لا تنمية محلية حقيقية بدون إشراك فعلي للمواطن في تدبير شأنه الجماعي, من خلال تمتيعه بكامل الحق في المعلومة الجماعية الرسمية و الصحيحة, و بوضع رهن إشارته كل المعطيات الخاصة بمرافق و مشاريع المقاطعة, وعيا منا بأن إعتماد المقاربة التشاركية في التنمية يبدأ بإخبار المواطن و عبره المحيط الخارجي و ينتهي بالمشاركة في تقييم حصيلة المنجزات و النتائج.</p><br/>
-                                <p>من هذا المنطلق, نضع رهن إشارة المتتبع الكريم للشأن المحلي بالحي المحمدي مجموعة من الوسائل التواصلية لتعزيز العلاقة بين المقاطعة و المحيط بشكل مهني و عملي, من خلال خلق قسم خاص بالتواصل الداخلي و الخارجي, وهذا الموقع الإلكتروني الدي خضع لعملية تطوير و تحيين لمختلف صفحاته الإلكترونية من طرف مصلحة الإعلاميات التابعة لمقاطعة الحي المحمدي, و تحت إشراف قسم الإعلام و التواصل بشكل يستجيب لإنتظارات رواد الشبكة العنكبوتية, و تحويله إلى موقع تفاعلي بإمتياز يضمن كل عوامل التواصل الألكتروني بين المقاطعة و الزوار محليا ووطنيا و دوليا من خلال دبلجته إلى اللغة الفرنسية في مرحلة ثانية و بالشكل الدي يخدم مصلحة المنطقة.</p>
+                                <p>  ﺕاﻥ ﺗﻄﻮﺭ ﻭاﺗﺴﺎﻉ ﺣﺎﺟﻴﺎﺕ اﻟﻤﻮاﻃﻨﺎﺕ ﻭاﻟﻤﻮاﻃﻨﻴﻦ ﺑﺠﻤﺎﻋﺘﻨﺎ ﻣﺮﺗﺒﻂ ﺑﺘﻄﻮﺭ ﻭﺛﻴﺮﺓ ﺣﻴﺎﺗﻬﻢ، ﻭﻳﺤﺘﻢ ﻋﻠﻴﻨﺎ ﺫﻟﻚ ﻭﺑﺎﻟﻀﺮﻭﺭﺓ، ﺃﻥ ﻧﻜﻮﻥ ﻓﻲ ﻣﺴﺘﻮﻯ ﺗﻠﺒﻴﺔ ﻭاﻻﺳﺘﺠﺎﺑﺔ ﻟﻬﺬﻩ اﻟﺤﺎﺟﻴﺎﺕ، ﺑﻤﺎ ﻳﺘﻮﻓﺮ ﻟﺠﻤﺎﻋﺘﻨﺎ ﻣﻦ ﻣﻮاﺭﺩ ﻭﺇﻣﻜﺎﻧﺎﺕ، ﻭﺑﻤﺎ ﻳﺘﻴﺤﻪ ﻟﻨﺎ اﻟﻘﺎﻧﻮﻥ ﻣﻦ اﺧﺘﺼﺎﺻﺎﺕ.
+                                </p><br/>
+                                <p>
+ﻭاﻥ ﺗﻠﺒﻴﺔ ﻫﺬﻩ اﻟﺤﺎﺟﻴﺎﺕ ﻳﺠﺐ ﺃﻥ ﻳﻜﻮﻥ ﺑﺨﺪﻣﺎﺕ ﻣﻼﺋﻤﺔ ﻟﻠﻌﺼﺮ ﻭﻟﺘﺤﺪﻳﺎﺕ اﻟﻘﺮﻥ اﻟﻮاﺣﺪ ﻭاﻟﻌﺸﺮﻳﻦ، ﻣﻤﺎ اﺳﺘﺪﻋﻰ ﻭاﺳﺘﻠﺰﻡ ﺗﻐﻴﻴﺮ ﻣﻨﻬﺠﻴﺔ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺎﺕ، ﻭﻫﺬا ﻣﺎ ﺃﺳﺲ ﻟﻪ اﻟﻘﺎﻧﻮﻥ اﻟﺘﻨﻈﻴﻤﻲ اﻟﺠﺪﻳﺪ 113/14 اﻟﻤﺘﻌﻠﻖ ﺑﺎﻟﺠﻤﺎﻋﺎﺕ، ﺣﻴﺚ اﻧﺘﻘﻠﻨﺎ ﻟﻤﺮﺣﻠﺔ ﺟﺪﻳﺪﺓ، ﻣﻜﻨﺖ ﻣﻦ ﺗﻐﻴﻴﺮ ﺃﺳﺎﻟﻴﺐ اﻟﺘﻔﻜﻴﺮ ﻭاﻟﻤﻤﺎﺭﺳﺔ ﻣﻌﺎ، ﻓﻲ ﻛﻴﻔﻴﺔ اﻟﺘﺪﺑﻴﺮ، ﻭﻓﻲ ﻣﺴﺘﻮﻯ اﻟﺨﺪﻣﺎﺕ اﻟﻤﻘﺪﻣﺔ، ،ﺣﺘﻰ ﻧﺘﻤﻜﻦ ﻣﻦ ﺭﻓﻊ ﺗﺤﺪﻱ اﻟﺤﻜﺎﻣﺔ ﺑﺠﻤﺎﻋﺘﻨﺎ، ﻭاﻻﻧﺘﻘﺎﻝ ﺇﻟﻰ ﻣﺮﺣﻠﺔ ﻣﺆﺳﺴﺎﺗﻴﺔ اﺣﺘﺮاﻓﻴﺔ، ﺗﺪﻣﺞ ﺑﻴﻦ ﻣﺰاﻳﺎ اﻟﺘﺨﻄﻴﻂ ﻭ ﻓﻌﺎﻟﻴﺔ اﻟﺒﺮﻣﺠﺔ اﻟﻮاﻗﻌﻴﺔ.                                </p><br/>
+                                  <p>
+ﺇﻥ ﺯﻣﻦ اﻟﻮﻻﻳﺔ اﻻﻧﺘﺪاﺑﻴﺔ ﻟﻠﻤﺠﻠﺲ اﻟﺠﻤﺎﻋﻲ ﻭﻫﻲ ﺳﺖ ﺳﻨﻮاﺕ، ﻳﺠﺐ ﺃﻥ ﻳﻜﻮﻥ ﺯﻣﻨﺎ ﻟﻹﻧﺠﺎﺯ ﻭاﻟﺘﺤﻘﻴﻖ، ﻟﺒﺮاﻣﺞ ﻭﻣﺸﺎﺭﻳﻊ ﻭﺃﻧﺸﻄﺔ، ﺗﺄﺧﺬ ﺑﻌﻴﻦ اﻻﻋﺘﺒﺎﺭ اﻟﺤﺎﺟﻴﺎﺕ ﺫاﺕ اﻷﻭﻟﻮﻳﺔ ﻟﻠﺴﺎﻛﻨﺔ، ﺑﺄﻓﻖ ﻭﺭﺅﻳﺔ ﻋﻠﻤﻴﺔ ﻭاﺿﺤﺔ ﻟﻠﻤﺠﺎﻝ اﻟﺘﺮاﺑﻲ ﻛﺈﻃﺎﺭ ﻟﻠﻌﻴﺶ اﻟﻤﺸﺘﺮﻙ، ﻳﺆﻣﻦ ﺗﻨﻤﻴﺔ ﻣﺴﺘﺪاﻣﺔ ﻋﺎﺩﻟﺔ ﻭﻣﻨﺼﻔﺔ، ﻋﺒﺮ ﺗﺜﻤﻴﻦ اﻹﻣﻜﺎﻥ اﻟﺒﺸﺮﻱ ﻭاﻹﻣﻜﺎﻥ اﻟﺘﺮاﺑﻲ ﻭﺟﻌﻞ ﺟﻤﺎﻋﺘﻨﺎ ﻓﺎﻋﻼ ﺗﻨﻤﻮﻳﺎ.                                </p><br/>
+                                  <p>
+اﻥ ﻭﺛﻴﻘﺔ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﺗﺸﻜﻞ ﺗﺘﻮﻳﺠﺎ ﻟﻤﺴﺎﺭ ﻣﻦ اﻷﻧﺸﻄﺔ ﻭاﻟﻌﻤﻠﻴﺎﺕ اﻻﻋﺪاﺩﻳﺔ، ﻭاﻟﺘﻲ ﺷﻜﻠﺖ اﺳﺘﺠﺎﺑﺔ ﻟﻠﻤﻘﺘﻀﻴﺎﺕ اﻟﻘﺎﻧﻮﻧﻴﺔ اﻟﺠﺪﻳﺪﺓ اﻟﺘﻲ ﻳﺆﻃﺮﻫﺎ اﻟﻘﺎﻧﻮﻥ اﻟﺘﻨﻈﻴﻤﻲ 113/14 اﻟﻤﺘﻌﻠﻖ ﺑﺎﻟﺠﻤﺎﻋﺎﺕ ﻭﻛﺪا اﻟﻤﺮﺳﻮﻡ اﻟﺘﻄﺒﻴﻘﻲ اﻟﻤﺤﺪﺩ ﻟﻤﺴﻄﺮﺓ ﺇﻋﺪاﺩ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﻣﻦ ﺃﺟﻞ ﺭﻓﻊ ﺗﺤﺪﻱ اﻟﺘﻨﻤﻴﺔ اﻟﻤﺠﺎﻟﻴﺔ اﻟﻤﺴﺘﺪاﻣﺔ اﻟﻌﺎﺩﻟﺔ ﻭاﻟﻤﻨﺼﻔﺔ ﺑﺎﻟﺠﻤﺎﻋﺔ.                                </p><br/>
+                                 
+                                     <p>
+ﻟﻘﺪ ﺗﻢ ﺗﺪﺷﻴﻦ ﻫﺬا اﻟﻤﺴﺎﺭ اﻹﻋﺪاﺩﻱ ﻟﺒﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﺑﺎﻟﺘﺸﺎﻭﺭ اﻟﺪاﺧﻠﻲ ﻭاﺗﺨﺎﺫ ﻗﺮاﺭ ﺇﻋﺪاﺩ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﻣﺮﻭﺭا ﺑﺎﻹﻋﺪاﺩ اﻟﺘﻘﻨﻲ ﻟﻬﺪﻩ اﻟﻌﻤﻠﻴﺔ ﻭﺗﺸﻜﻴﻞ ﻓﺮﻳﻖ اﻟﻌﻤﻞ اﻟﺠﻤﺎﻋﻲ.                                    
+                                </p><br/>
+                                     <p>
+ﻭﺑﻌﺪ ﺫﻟﻚ ﺗﻢ اﻻﻧﺘﻘﺎﻝ  اﻟﻰ ﻣﺮﺣﻠﺔ اﻟﺘﺸﺎﻭﺭ اﻟﻮاﺳﻊ ﻣﻊ ﺳﺎﻛﻨﺔ اﻟﺠﻤﺎﻋﺔ ﻭﺟﻤﻌﻴﺎﺕ اﻟﻤﺠﺘﻤﻊ اﻟﻤﺪﻧﻲ ﻭﻫﻴﺄﺓ اﻟﻤﺴﺎﻭاﺓ ﻭﺗﻜﺎﻓﺆ اﻟﻔﺮﺹ ﻭﻣﺨﺘﻠﻒ اﻟﻔﺎﻋﻠﻴﻦ اﻻﻗﺘﺼﺎﺩﻳﻴﻦ ﻭاﻻﺟﺘﻤﺎﻋﻴﻴﻦ ﺑﺎﻟﺠﻤﺎﻋﺔ، ﻟﺘﺸﺨﻴﺺ ﻣﺨﺘﻠﻒ اﻟﻤﺸﺎﻛﻞ ﻭﺗﺤﺪﻳﺪ اﻟﺤﺎﺟﻴﺎﺕ ﻭاﻗﺘﺮاﺡ اﻟﺤﻠﻮﻝ.                                </p><br/>
+                                     <p>
+اﻥ ﻣﺨﺘﻠﻒ ﻣﺮاﺣﻞ ﺇﻋﺪاﺩ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﺗﻤﺖ ﺑﺎﻟﺘﻌﺎﻭﻥ ﻣﻊ اﻟﻤﺼﺎﻟﺢ اﻟﻻﻣﻤﺮﻛﺰﺓ ﻭاﻟﺠﻤﺎﻋﺎﺕ اﻟﺘﺮاﺑﻴﺔ اﻷﺧﺮﻯ، ﺧﺎﺻﺔ ﻣﺠﻠﺲ اﻟﺠﻬﺔ ﻭﻣﺠﻠﺲ اﻹﻗﻠﻴﻢ، ﻣﻦ ﺃﺟﻞ ﺗﺤﻘﻴﻖ اﻻﻟﺘﻘﺎﺋﻴﺔ ﻭاﻻﻧﺴﺠﺎﻡ ﻓﻲ ﻣﺨﺘﻠﻒ اﻟﺘﺪﺧﻼﺕ ﺑﺨﺼﻮﺹ اﻟﻤﺸﺎﺭﻳﻊ اﻟﻤﺰﻣﻊ ﺇﻗﺎﻣﺘﻬﺎ ﺃﻭ ﺑﺮﻣﺠﺘﻬﺎ ﻓﻮﻕ ﺗﺮاﺏ اﻟﺠﻤﺎﻋﺔ، ﺑﺘﻨﺴﻴﻖ ﺗﺎﻡ ﻣﻊ ﻋﺎﻣﻞ اﻹﻗﻠﻴﻢ.                                </p><br/>
+                                     <p>
+ﻭﻓﻲ ﻧﻔﺲ اﻟﻮﻗﺖ اﻟﺬﻱ ﺣﺎﻓﻈﺖ ﻣﻨﻬﺠﻴﺔ ﺇﻋﺪاﺩ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ ﻋﻠﻰ ﻣﺰاﻳﺎ اﻟﺘﺨﻄﻴﻂ، ﻓﺈﻧﻬﺎ ﻗﻄﻌﺖ ﻣﻊ ﺑﺮﻣﺠﺔ اﻟﻤﺸﺎﺭﻳﻊ ﻏﻴﺮ اﻟﻮاﻗﻌﻴﺔ، ﺩﻟﻚ ﺃﻥ اﻟﻤﺮﺳﻮﻡ اﻟﺘﻄﺒﻴﻘﻲ اﻟﻤﺤﺪﺩ ﻟﻤﺴﻄﺮﺓ ﺇﻋﺪاﺩ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ ﻳﺆﻛﺪ ﻋﻠﻰ ﻭﺟﻮﺏ ﺃﻥ ﺗﻜﻮﻥ ﻣﺨﺘﻠﻒ اﻟﻤﺸﺎﺭﻳﻊ ﻭاﻷﻧﺸﻄﺔ اﻟﻤﺒﺮﻣﺠﺔ ﻗﺎﺑﻠﺔ ﻟﻹﻧﺠﺎﺯ ﻭاﻟﺘﺤﻘﻖ ﻭﻗﺎﺑﻠﺔ ﻟﻠﻘﻴﺎﺱ.                                </p><br/>
+                                 <p>
+ﻭﻓﻲ ﻫﺬا اﻹﻃﺎﺭ ﻓﺎﻥ ﻣﺠﻠﺲ اﻟﺠﻤﺎﻋﺔ، اﻟﺘﺰﻡ ﺑﻤﻘﺘﻀﻴﺎﺕ اﻟﻘﺎﻧﻮﻥ اﻟﺘﻨﻈﻴﻤﻲ اﻟﻤﺘﻌﻠﻖ ﺑﺎﻟﺠﻤﺎﻋﺎﺕ ﻭﻛﺬا اﻟﻤﺮﺳﻮﻡ اﻟﺘﻄﺒﻴﻘﻲ اﻟﻤﺘﻌﻠﻖ ﺑﺒﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﻭﺫﻟﻚ ﺑﺒﺮﻣﺠﺔ ﻣﺸﺎﺭﻳﻊ ﻭﺃﻧﺸﻄﺔ ﺗﺴﺘﺠﻴﺐ ﻟﻷﻭﻟﻮﻳﺎﺕ اﻟﺘﻨﻤﻮﻳﺔ، ﻭاﻟﺘﻲ ﺃﺧﺪﺕ ﺑﻌﻴﻦ اﻻﻋﺘﺒﺎﺭ اﻗﺘﺮاﺣﺎﺕ اﻟﻤﻮاﻃﻨﺎﺕ ﻭاﻟﻤﻮاﻃﻨﻴﻦ ﺑﺎﻟﺠﻤﺎﻋﺔ ﻣﻦ ﺟﻬﺔ، ﻛﻤﺎ ﺭاﻋﺖ ﻭﻓﻲ ﻧﻔﺲ اﻵﻥ اﻹﻣﻜﺎﻧﺎﺕ اﻟﻤﺎﺩﻳﺔ اﻟﻤﺘﻮﻓﺮﺓ ﺃﻭ اﻟﺘﻲ ﻳﻤﻜﻦ ﺗﻌﺒﺌﺘﻬﺎ ﻣﻦ ﻃﺮﻑ اﻟﺠﻤﺎﻋﺔ ﻣﻦ ﺟﻬﺔ ﺃﺧﺮﻯ.
+                                </p><br/>
+                                <p>
+: ﻟﻘﺪ اﺳﺘﻬﺪﻑ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ اﻟﻮﺻﻮﻝ اﻟﻰ ﺗﺤﻘﻴﻖ ﺟﻤﺎﻋﺔ ﻋﺼﺮﻳﺔ ﻣﺴﺘﺠﻴﺒﺔ ﻟﻤﺘﻄﻠﺒﺎﺕ اﻟﺘﻨﻤﻴﺔ اﻟﻤﺴﺘﺪاﻣﺔ
+ﺣﺘﻰ ﺗﺼﻴﺮ ﺟﻤﺎﻋﺘﻨﺎ ﻣﺠﺎﻻ ﻟﻠﻌﻴﺶ اﻟﻤﺸﺘﺮﻙ، ﻳﺘﻴﺢ ﻟﺴﺎﻛﻨﺘﻪ ﻭﻟﻮﺟﺎ ﺳﻠﺴﺎ ﻟﻠﺨﺪﻣﺎﺕ اﻷﺳﺎﺳﻴﺔ، ﻭﺇﻃﺎﺭا ﻣﺤﻔﺰا ﻋﻠﻰ اﻻﺳﺘﻘﺮاﺭ، ﻭﻳﺸﻜﻞ ﻣﺮﻛﺰ ﺟﺪﺏ اﻗﺘﺼﺎﺩﻱ، ﻋﺒﺮ ﺗﺜﻤﻴﻦ اﻹﻣﻜﺎﻥ اﻟﺒﺸﺮﻱ ﻭﺗﺜﻤﻴﻦ اﻹﻣﻜﺎﻥ اﻟﺘﺮاﺑﻲ، ﻭﺟﻌﻞ اﻟﺠﻤﺎﻋﺔ ﻓﺎﻋﻼ ﺗﻨﻤﻮﻳﺎ، ﻭﺣﺎﺿﻨﺎ ﻭﺩاﻋﻤﺎ ﻭﻣﺴﺘﻘﻄﺒﺎ ﻭﻣﻤﻜﻨﺎ ﻟﻤﺨﺘﻠﻒ اﻟﻔﺎﻋﻠﻴﻦ اﻻﻗﺘﺼﺎﺩﻳﻴﻦ ﻭاﻻﺟﺘﻤﺎﻋﻴﻴﻦ ﻭاﻟﻤﺪﻧﻴﻴﻦ ﺑﺘﺮاﺏ اﻟﺠﻤﺎﻋﺔ، ﻣﻦ ﺃﺟﻞ ﺗﺤﻘﻴﻖ ﺗﻨﻤﻴﺔ ﻣﺠﺎﻟﻴﺔ ﻣﺴﺘﺪاﻣﺔ ﻣﻨﺼﻔﺔ ﻭﻋﺎﺩﻟﺔ
+                                </p><br/>
+                                
+<p>
+                                ﻛﻤﺎ اﺳﺘﻬﺪﻑ ﺑﺮﻧﺎﻣﺞ ﻋﻤﻞ ﺟﻤﺎﻋﺘﻨﺎ ﻋﺼﺮﻧﺔ ﻭﺗﺤﺪﻳﺚ ﺃﺩﻭاﺕ ﻭاﻟﻴﺎﺕ ﻋﻤﻞ اﻟﺠﻤﺎﻋﺔ، ﺑﺎﻟﻌﻤﻞ ﻋﻠﻰ ﺭﻗﻤﻨﺔ ﺟﻤﻴﻊ اﻟﻤﺼﺎﻟﺢ اﻟﺠﻤﺎﻋﻴﺔ، ﻭﺧﻠﻖ ﺑﻮاﺑﺔ اﻟﻴﻜﺘﺮﻭﻧﻴﺔ ﻟﻠﺠﻤﺎﻋﺔ، ﺣﺘﻰ ﺗﻜﻮﻥ ﺟﻤﺎﻋﺘﻨﺎ ﻣﻨﻔﺘﺤﺔ ﻋﻠﻰ ﻣﺤﻴﻄﻬﺎ اﻟﻤﺤﻠﻲ ﻭاﻹﻗﻠﻴﻤﻲ ﻭاﻟﺠﻬﻮﻱ ﻭاﻟﻮﻃﻨﻲ، ﻭﻟﺘﺼﺒﺢ ﻛﺬﻟﻚ ﺟﻤﺎﻋﺔ ﻣﻨﻔﺘﺤﺔ ﻋﻠﻰ اﻟﻌﺎﻟﻢ، ﺑﻤﺎ ﻳﻌﺰﺯ ﻓﺮﺻﻬﺎ ﻓﻲ ﺗﻨﻤﻴﺔ ﻭﺗﻌﺒﺌﺔ ﻣﺨﺘﻠﻒ ﺃﻧﻮاﻉ اﻟﺘﻌﺎﻭﻥ ﻭاﻟﺸﺮاﻛﺔ. 
+                                </p><br/>
 
                             </div>
                         </div>
@@ -124,13 +149,13 @@
                                 <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
                                 font-size: 18px; background-color:#0a5d45; font-weight: 500; padding-top: 5px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
                                     <i class="fas fa-newspaper"></i>
-                                    <span>أحداث</span>
+                                    <span>ﺃﺣﺪاﺙ</span>
                                 </a>
                             </div>
                             <div class='col s10' style=' padding-top: 4px; display: flex; flex-direction: row-reverse;'>
                                 <span  class='red-text' style="font-size:18px; font-weight: 600;font-family: 'DroidArabicKufi', serif;">2019-12-12</span>
-                                <span  class='black-text' style="font-family: 'DroidArabicKufi', serif; direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;">من اجل السلامة الطرقية:</span>
-                                <span  class='black-text truncate' style="font-size:18px; padding-right: 1%; width: 60%; font-family: 'DroidArabicKufi', serif;">حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</span>
+                                <span  class='black-text' style="font-family: 'DroidArabicKufi', serif; direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;">ﺃﺷﻐﺎﻝ ﺗﺒﻠﻴﻂ ﻭ ﺗﺮﺻﻴﻒ اﻷﺣﻴﺎء اﻟﻨﺎﻗﺼﺔ اﻟﺘﺠﻬﻴﺰ ﺑﺤﻲ اﻟﺮﺣﺎﻟﻲ ﺟﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ  </span>
+                                <span  class='black-text truncate' style="font-size:18px; padding-right: 1%; width: 60%; font-family: 'DroidArabicKufi', serif;"> ...   </span>
                             </div>
                         </div>
                         <div class="row" style="padding-top: 2px">
@@ -138,13 +163,13 @@
                                 <a class="waves-effect waves-light btn" style='width: 100%; height: 43px;
                                 font-size: 18px; background-color:#ea534f; font-weight: 500; padding-top: 5px; padding-bottom: 3px; display: inline; padding-left: 25%; padding-right: 25%;'>
                                 <i class="fas fa-newspaper"></i>
-                                <span>أحداث</span>
+                                <span>ﺃﺣﺪاﺙ</span>
                             </a>
                             </div>  
                             <div class='col s10' style=' padding-top: 4px; display: flex; flex-direction: row-reverse;'>
                                 <span  class='red-text' style="font-size:18px; font-weight: 600; font-family: 'DroidArabicKufi', serif;">2019-12-12</span>
-                                <span  class='black-text' style="font-family: 'DroidArabicKufi', serif; direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;">من اجل السلامة الطرقية:</span>
-                                <span  class='black-text truncate' style="font-size:18px; padding-right: 1%; width: 60%; font-family: 'DroidArabicKufi', serif;">حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</span>
+                                <span  class='black-text' style="font-family: 'DroidArabicKufi', serif; direction: rtl; font-size:18px; padding-right: 1%; font-weight: 600;">• ﺃﺷﻐﺎﻝ ﺗﻬﻴﺌﺔ ﻭ ﺇﺻﻼﺡ ﻣﻨﺸﺎﺕ اﻟﻤﺮاﺏ ﻭ اﻟﻤﺤﺠﺰ اﻟﺠﻤﺎﻋﻴﻴﻦ   ﺑﺠﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ     </span>
+                                <span  class='black-text truncate' style="font-size:18px; padding-right: 1%; width: 60%; font-family: 'DroidArabicKufi', serif;">  ...</span>
                             </div>
                         </div>
                     </div>
@@ -158,61 +183,60 @@
                                 <a class="btn waves-effect" style="background-color:#ea534f; font-weight: 700; font-size:15px">ﺃﻧﺸﻄﺔ اﻟﻤﺠﻠﺲ</a>
                             </div>
                             <a class="carousel-item" href="#one!">
-                                <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار  فظ ال فظ ال:من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار فظ ال  :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img style='height:420px' src="images/slider4.jpg"/>
+                                <h2>ﺃﺷﻐﺎﻝ ﺗﺒﻠﻴﻂ ﻭ ﺗﺮﺻﻴﻒ اﻷﺣﻴﺎء اﻟﻨﺎﻗﺼﺔ اﻟﺘﺠﻬﻴﺰ ﺑﺤﻲ اﻟﺮﺣﺎﻟﻲ ﺟﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ   </h2>
+                                <p>ﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌ ﺔ</p>
+                                <img style='height:420px' src="images/qods.jpg"/>
                             </a>
                             <a class="carousel-item" href="#one!">
-                                <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img style='height:420px' src="images/slider4.jpg"/>
+                                <h2>ﺃﺷﻐﺎﻝ  ﺗﺒﻠﻴﻂ ﻭﺗﺮﺻﻴﻒ اﻷﺣﻴﺎء اﻟﻨﺎﻗﺼﺔ اﻟﺘﺠﻬﻴﺰ ﺑﺤﻲ اﻧﺰاﻟﺔ اﻟﺠﺎﻣﻊ ﺟﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ </h2>
+                                                               <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
+                                <img style='height:420px' src="images/sania.jpg"/>
                             </a>
                             <a class="carousel-item" href="#two!">
-                                <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img style='height:420px' src="images/slider3.png"/>
+                                <h2>  - ﺃﺷﻐﺎﻝ ﺗﺒﻠﻴﻂ ﻭﺗﺮﺻﻴﻒ اﻷﺣﻴﺎء اﻟﻨﺎﻗﺼﺔ اﻟﺘﺠﻬﻴﺰ ﺑﺤﻲ اﻧﺰاﻟﺔ اﻟﺠﺎﻣﻊ ﺟﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ  </h2>
+                                                               <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
+                                <img style='height:420px' src="images/bloc.png"/>
                             </a>
                             <a class="carousel-item" href="#three!">
-                                <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img style='height:420px' src="images/slider3.png"/>
+                                <h2>ﺃﺷﻐﺎﻝ ﺗﺒﻠﻴﻂ ﻭﺗﺮﺻﻴﻒ اﻷﺣﻴﺎء اﻟﻨﺎﻗﺼﺔ اﻟﺘﺠﻬﻴﺰ ﺑﺤﻲ اﻧﺰاﻟﺔ اﻟﺠﺎﻣﻊ ﺟﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ   </h2>
+                                                               <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
+                                <img style='height:420px' src="images/tis2.jpg"/>
                             </a>
                             <a class="carousel-item" href="#four!">
-                                <h2>من اجل السلامة الطرقية</h2>
-                                <p>احتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                <img style='height:420px' src="images/slider3.png"/>
+                                <h2>  ﺗﻬﻴﺌﺔ اﻟﻄﺮﻳﻖ اﻟﻤﻮاﺯﻳﺔ ﻟﺸﺎﺭﻉ ﺃﺣﻤﺪ ﺑﻠﺤﺴﻦ ﺑﺠﻤﺎﻋﺔ ﻣﺪﻳﻮﻧﺔ </h2>
+                                <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
+                                <img style='height:420px' src="images/tis1.jpg"/>
                             </a>
                         </div>
                         <!--Offers-->
                         <div class="row hoverable" style='width: 100%; margin-right: 0;' >
                             <div class='center' style="position: absolute; padding-left: 1%;">
-                                <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">طلبات العروض</a>
+                                <a class="btn waves-effect" style="background-color:#3997bb; width:230px; font-weight: 700; font-size:15px">ﻃﻠﺒﺎﺕ اﻟﻌﺮﻭﺽ</a>
                             </div>
                             <div id='offers-ticker' class="z-depth-1">
                                 <div class="innerWrap" style='width: 100%; padding-left: 4%; padding-top: 7%; padding-right: 2%;'>
                                     <div>
-                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
-                                        
+                                        <img src="images/hay.jpg" style="height: 123px; width: 25%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>ﻣﻦ اﺟﻞ اﻟﺴﻼﻣﺔ اﻟﻄﺮﻗﻴﺔ:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                        <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
                                     </div>
                                     <div class="divider"></div>
                                     <div style='padding-top: 2%;'>
-                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 25%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>ﻣﻦ اﺟﻞ اﻟﺴﻼﻣﺔ اﻟﻄﺮﻗﻴﺔ:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                       <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
                                     </div>
                                     <div class="divider"></div>
                                     <div style='padding-top: 2%;'>
-                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 25%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>ﻣﻦ اﺟﻞ اﻟﺴﻼﻣﺔ اﻟﻄﺮﻗﻴﺔ:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                         <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
                                     </div>
                                     <div class="divider"></div>
                                     <div style='padding-top: 2%;'>
-                                        <img src="images/hay.jpg" style="height: 123px; width: 35%; float: right;"/>
-                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>من اجل السلامة الطرقية:  <span class='blue-txt'>(12-12-2019)</span></h5>
-                                        <p  class='black-text'>حتضنت مقاطعة الحي المحمدي يوم الأربعاء 27 فبراير 2019 أشغال الملتقى الجهوي الأول المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة.المنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحةالمنظم تحت شعار :من أجل الارتقاء بخدمات مكتب حفظ الصحة</p>
+                                        <img src="images/hay.jpg" style="height: 123px; width: 25%; float: right;"/>
+                                        <h5  class='black-text' style='direction: rtl; font-size:18px; font-weight: 600;'>ﻣﻦ اﺟﻞ اﻟﺴﻼﻣﺔ اﻟﻄﺮﻗﻴﺔ:  <span class='blue-txt'>(12-12-2019)</span></h5>
+                                         <p>اﺣﺘﻀﻨﺖ ﻣﻘﺎﻃﻌﺔ  ﻣﺪﻳﻮﻧﺔ ﻳﻮﻡ اﻷﺭﺑﻌﺎء 27 ﻓﺒﺮاﻳﺮ 2019 ﺃﺷﻐﺎﻝ اﻟﻤﻠﺘﻘﻰ اﻟﺠﻬﻮﻱ اﻷﻭﻝ اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ.اﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔاﻟﻤﻨﻈﻢ ﺗﺤﺖ ﺷﻌﺎﺭ :ﻣﻦ ﺃﺟﻞ اﻻﺭﺗﻘﺎء ﺑﺨﺪﻣﺎﺕ ﻣﻜﺘﺐ ﺣﻔﻆ اﻟﺼﺤﺔ</p>
                                     </div>
                                 </div> 
                             </div>
@@ -222,7 +246,7 @@
                          <!--Associations-->
                         <div class='row hoverable' style="margin-right: 0%;">
                             <div class='center' style="position: absolute; padding-left: 1%;">
-                                <a class="btn waves-effect" style="background-color:#2c5ea9; width:230px; font-weight: 700; font-size:15px">أنشطة الجمعيات</a>
+                                <a class="btn waves-effect" style="background-color:#2c5ea9; width:230px; font-weight: 700; font-size:15px">ﺃﻧﺸﻄﺔ اﻟﺠﻤﻌﻴﺎﺕ</a>
                             </div>
                             <div id='association-ticker' class="z-depth-1 ticker">
                                 <div class="innerWrap" style='width: 100%; padding-top: 10%; height: 100%'>
@@ -231,7 +255,7 @@
                                             <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
                                         </div>
                                         <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
-                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                            <p  class='black-text' style='direction: rtl;'>اﻟﻤﻬﺮﺟﺎﻥ اﻷﻭﻝ ﻟﻘﺪﻣﺎء ﺗﻠﻤﻴﺬاﺕ ﻭﺗﻼﻣﻴﺬ اﻟﺜﺎﻧﻮﻳﺔ اﻹﻋﺪاﺩﻳﺔ اﻟﻤﺴﺘﻘﺒﻞ</p>
                                         </div>
                                     </div>
                                     <div class="divider"></div>
@@ -240,7 +264,7 @@
                                             <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
                                         </div>
                                         <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
-                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                            <p  class='black-text' style='direction: rtl;'>اﻟﻤﻬﺮﺟﺎﻥ اﻷﻭﻝ ﻟﻘﺪﻣﺎء ﺗﻠﻤﻴﺬاﺕ ﻭﺗﻼﻣﻴﺬ اﻟﺜﺎﻧﻮﻳﺔ اﻹﻋﺪاﺩﻳﺔ اﻟﻤﺴﺘﻘﺒﻞ</p>
                                         </div>
                                     </div>
                                     <div class="divider"></div>
@@ -249,7 +273,7 @@
                                             <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
                                         </div>
                                         <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
-                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                            <p  class='black-text' style='direction: rtl;'>اﻟﻤﻬﺮﺟﺎﻥ اﻷﻭﻝ ﻟﻘﺪﻣﺎء ﺗﻠﻤﻴﺬاﺕ ﻭﺗﻼﻣﻴﺬ اﻟﺜﺎﻧﻮﻳﺔ اﻹﻋﺪاﺩﻳﺔ اﻟﻤﺴﺘﻘﺒﻞ</p>
                                         </div>
                                     </div>
                                     <div class="divider"></div>
@@ -258,7 +282,7 @@
                                             <img src="images/association.jpg" style="height: 80px; width: 139px;"/>
                                         </div>
                                         <div class='col s8' style='padding-bottom: 3%; padding-right: 2%; padding-left: 0;'>
-                                            <p  class='black-text' style='direction: rtl;'>المهرجان الأول لقدماء تلميذات وتلاميذ الثانوية الإعدادية المستقبل</p>
+                                            <p  class='black-text' style='direction: rtl;'>اﻟﻤﻬﺮﺟﺎﻥ اﻷﻭﻝ ﻟﻘﺪﻣﺎء ﺗﻠﻤﻴﺬاﺕ ﻭﺗﻼﻣﻴﺬ اﻟﺜﺎﻧﻮﻳﺔ اﻹﻋﺪاﺩﻳﺔ اﻟﻤﺴﺘﻘﺒﻞ</p>
                                         </div>
                                     </div>
                                     <div class="divider"></div>
@@ -270,10 +294,10 @@
                             <div class='z-depth-1 hoverable' style='padding: 5%;'>
                                 <div class='row' style='display: flex; flex-direction: row-reverse;'>
                                     <div class='col s6' style="direction: rtl">
-                                        <h5 style='font-weight: 600;'>أجندة مديونة</h5>
+                                        <h5 style='font-weight: 600;'>ﺃﺟﻨﺪﺓ ﻣﺪﻳﻮﻧﺔ</h5>
                                     </div>
                                     <div class='col s6'>
-                                        <a class="btn-floating btn-large waves-effect waves-light blue pulse tooltipped" data-position="top" data-tooltip="تصفح الأجندة">
+                                        <a class="btn-floating btn-large waves-effect waves-light blue pulse tooltipped" data-position="top" data-tooltip="ﺗﺼﻔﺢ اﻷﺟﻨﺪﺓ">
                                             <i class="far fa-calendar fa-large"></i>
                                         </a>
                                     </div>   
@@ -284,8 +308,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -293,8 +317,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ    ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -302,8 +326,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -311,8 +335,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -320,8 +344,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -329,8 +353,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                     <li class="collection-item row" style='display:flex; flex-direction: row-reverse; height: 90px;'>
@@ -338,8 +362,8 @@
                                             <i class="far fa-calendar fa-3x blue-text"></i>
                                         </div>
                                         <div class='col s10'>
-                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>الجمعة 01 يناير 1970 01:00</h6>
-                                            <p class='agenda-desc'>البرنامج التوقعي للصفقات المزمع برمجتها بمقاطعة الحي المحمدي برسم السنة المالية 2019</p>
+                                            <h6 class="title" style='color:#045e92; font-weight: 600; display:flex; flex-direction: row-reverse;'>01:00 1970 اﻟﺠﻤﻌﺔ 01 ﻳﻨﺎﻳﺮ</h6>
+                                            <p class='agenda-desc'>2019 اﻟﺒﺮﻧﺎﻣﺞ اﻟﺘﻮﻗﻌﻲ ﻟﻠﺼﻔﻘﺎﺕ اﻟﻤﺰﻣﻊ ﺑﺮﻣﺠﺘﻬﺎ ﺑﺮﺳﻢ اﻟﺴﻨﺔ اﻟﻤﺎﻟﻴﺔ</p>
                                         </div>
                                     </li>
                                 </div>  
@@ -354,13 +378,13 @@
                     <div class="rvs-container">
                         <div class="rvs-item-container">
                             <div class="rvs-item-stage">
-                                <div class="rvs-item" style="background-image: url('http://i.ytimg.com/vi/C8wzPmH7KRQ/maxresdefault.jpg')">
+                                <div class="rvs-item" style="background-image: url('images/vid1.jpg')">
                                     <p class="rvs-item-text">VIDEO_TITLE <small>by VIDEO_CREDITS</small></p>
-                                    <a href="https://youtu.be/C8wzPmH7KRQ" class="rvs-play-video"></a>
+                                    <a href="https://youtu.be/rt2T94VSHCw" class="rvs-play-video"></a>
                                 </div>
-                                <div class="rvs-item" style="background-image: url('http://i.ytimg.com/vi/Ipqs_KaoZPI/maxresdefault.jpg')">
+                                <div class="rvs-item" style="background-image: url('images/vid2.png')">
                                     <p class="rvs-item-text">VIDEO_TITLE <small>by VIDEO_CREDITS</small></p>
-                                    <a href="https://youtu.be/Ipqs_KaoZPI" class="rvs-play-video"></a>
+                                    <a href="https://youtu.be/5Tuue6icIeg" class="rvs-play-video"></a>
                                 </div>
                             </div>
                         </div>
@@ -389,13 +413,13 @@
                     <div class='col' style='padding-top: 3%; width: 30%'>
                         <ul id="mediouna-slider">
                             <li>
-                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                                <img class='materialboxed' style='width: 100%' src='images/commune.jpeg'>
                             </li>
                             <li>
-                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                                <img class='materialboxed' style='width: 100%' src='images/commune1.jpeg'>
                             </li>
                             <li>
-                                <img class='materialboxed' style='width: 100%' src='images/commune.jpg'>
+                                <img class='materialboxed' style='width: 100%' src='images/commune.jpeg'>
                             </li>
                         </ul>
                     </div>
@@ -416,22 +440,23 @@
                     <div style='padding-right: 8%;'>
                         <div class="row" style='display: flex; flex-direction: row-reverse;'>
                             <div class='col s4' style='direction: rtl;'>
-                                <h5 style=" font-weight: 600">نبذة عنا</h5>
-                                <p style='text-align: justify;'>عرف التجمع الحضري بالدار البيضاء خلال الربع الأخير من القرن العشرين وأوائل القرن الحالي عدة تقسيمات إدارية وجماعية يتوخى منها تقريب الإدارة من المواطنين ، وذلك بغية ضبط حاجيات السكان وتلبيتها عن قرب .</p>
+                                <h5 style=" font-weight: 600">ﻧﺒﺬﺓ ﻋﻨﺎ</h5>
+                                <p style='text-align: justify;'>ﻣﻨﻄﻘﺔ ﻣﺪﻳﻮﻧﺔ ﻟﻬﺎ ﺗﺎﺭﻳﺦ ﻋﺮﻳﻖ ﻭ ﺇﺭﺙ ﺣﻀﺎﺭﻱ ﻭ ﺛﻘﺎﻓﻲ ﻛﺒﻴﺮ ﻟﻤﺎ ﺗﺘﻤﻴﺰ ﺑﻪ ﻣﻦ اﻟﻘﺼﺒﺎﺕ ﻭ ﻣﻮﻗﻌﻬﺎ ﻹﺳﺘﺮاﺗﻴﺠﻲ. ﻟﻬﺬا ﻣﻘﺎﻃﻌﺔ ﻣﺪﻳﻮﻧﺔ ﺗﻌﻤﻞ ﺟﺎﻫﺪﺓ ﻋﻠﻰ ﻗﺪﻡ ﻭ ﺳﺎﻕ ﻣﻦ ﺃﺟﻞ ﺭﺩ اﻹﻋﺘﺒﺎﺭ ﻟﻤﻜﺎﻧﺔ اﻟﻤﻨﻄﻘﺔ اﻟﺘﺎﺭﻳﺨﻴﺔ ﺑﻐﻴﺔ ﺭﻗﻲ اﻟﻤﻨﻄﻘﺔ ﻭ اﺯﺩﻫﺎﺭﻫﺎ ﻭ ﻫﺬا ﻟﻦ ﻳﺘﻢ ﺇﻻ ﺑﺎﻟﻤﺴﺎﻭﺓ ''ﺳﺎﻛﻨﺔ ﻭ ﻣﻘﺎﻃﻌﺔ''.
+   </p>
                             </div>
                             <div class='col s5' style='direction: rtl; padding-right: 3%;'>
-                                <h5 style=" font-weight: 600">اتصال</h5>
-                                <p><i style='padding-left: 2%;' class="material-icons md-light">location_on</i>المركب الإداري، 1 شارع علي يعتة، الدارالبيضاء، المغرب</p>
-                                <p><i style='padding-left: 2%;' class="material-icons md-light">access_time</i>أوقات العمل - 08:30-:16:30</p>
+                                <h5 style=" font-weight: 600">اﺗﺼﺎﻝ</h5>
+                                <p><i style='padding-left: 2%;' class="material-icons md-light">location_on</i>اﻟﻤﺮﻛﺐ اﻹﺩاﺭﻱ، 1 ﺷﺎﺭﻉ ﻋﻠﻲ ﻳﻌﺘﺔ، اﻟﺪاﺭاﻟﺒﻴﻀﺎء، اﻟﻤﻐﺮﺏ</p>
+                                <p><i style='padding-left: 2%;' class="material-icons md-light">access_time</i>16:30:-08:30 - ﺃﻭﻗﺎﺕ اﻟﻌﻤﻞ</p>
                                 <p style="display: flex"><i style='padding-left: 2%;' class="material-icons md-light">phone</i>
                                     <span style='direction: ltr!important;'>(+212) 0522 61 10 99</span>
                                 </p>
                                 <p><i style='padding-left: 2%;' class="material-icons md-light">alternate_email</i>contact@mediouna.org</p>
                             </div>
                             <div class='col s3' style='direction: rtl; padding-top: 4%; padding-right: 5%;'>
-                                <h5>تحتاجون  لى <br/>مساعدة ؟</h5>
+                                <h5>ﺗﺤﺘﺎﺟﻮﻥ  ﻟﻰ <br/>ﻣﺴﺎﻋﺪﺓ ؟</h5>
                                 <div style='padding-right: 9%'>
-                                    <a style='background-color:#396bf9' class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="أكتبوا لنا">
+                                    <a style='background-color:#396bf9' class="btn-floating btn-large waves-effect waves-light pulse tooltipped" data-position="top" data-tooltip="ﺃﻛﺘﺒﻮا ﻟﻨﺎ">
                                                 <i class="material-icons">email</i>
                                     </a>
                                 </div>
@@ -440,7 +465,7 @@
                     </div>
                     <div class="footer-copyright" style='border-top:1px solid #396bf9; background-color:#131111; margin-top: -15px;'>
                         <div class="container center white-text" style='direction: rtl; font-weight: 700;'>
-                            © 2019 جميع الحقوق محفوظة لموقع مقاطعة الحي المحمدي
+                            © 2019   ﺟﻤﻴﻊ اﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ ﻟﻤﻮﻗﻊ ﻣﻘﺎﻃﻌﺔ   ﻣﺪﻳﻮﻧﺔ 
                         </div>
                     </div>
                 </footer>
