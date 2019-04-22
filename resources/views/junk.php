@@ -1,3 +1,9 @@
+
+@section('container')
+  @parent
+@endsection
+
+
                 <div style='margin-top: 2%; margin-left: inherit;' class='row'>
                         <div class="innerWrap">
                             <div class="list">

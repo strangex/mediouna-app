@@ -36,30 +36,34 @@ p {font-family: 'DroidArabicKufi', serif; font-size: 18px;}
 	    );
 }
 
-.carousel-x .carousel-item > h2 { 
-   position: absolute; 
-   z-index:3;
-   top: 60%; 
-   left: 58%; 
-   font-weight: 700;
-   width: 100%; 
-   color:white;
-}
-
-.carousel-x .carousel-item > p { 
+.council-h {
+	font-size: 22px !important;
 	position: absolute; 
 	z-index:3;
-	top: 74%; 
+	top: 75%;
+	width: 94%;
+	font-weight: 700;
+	color:white;
+	right: 4%;
+	direction: rtl;
+}
+
+.council-p { 
+	position: absolute; 
+	z-index:3;
+	top: 75%; 
 	right: 4%;
 	height: 13%;
 	direction: rtl;
 	font-size: 17px ! important;
 	color:white;
+	width: 94%;
 }
+
 #offers-ticker  p { 
 	direction: rtl;
 	font-size:18px;
-	height: 170px;
+	height: 150px;
 	text-align: justify;
 	margin-right: 3%;
 }
@@ -94,4 +98,8 @@ ul,ol,li {
 }
 p {
 	font-size: 17px
+}
+
+.mediouna-photos {
+	height: 200px
 }
